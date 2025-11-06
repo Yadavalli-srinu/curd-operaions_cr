@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'CSS/tle.css' %}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>emp_id</th>
+            <th>mobile</th>
+            <th>email</th>
+            <th>salary</th>
+            <th>dept</th>
+            <th>join_date</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.name}}</td>
+            <td>{{i.emp_id}}</td>
+            <td>{{i.mobile}}</td>
+            <td>{{i.email}}</td>
+            <td>{{i.salary}}</td>
+            <td>{{i.dept}}</td>
+            <td>{{i.join_date}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'homepage' %}">HOME</a>
+</body>
+</html>
